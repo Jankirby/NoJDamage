@@ -18,5 +18,6 @@ class ExamplePlugin extends PluginBase implements Listener {
             }
         }
     }
+}
 
 
