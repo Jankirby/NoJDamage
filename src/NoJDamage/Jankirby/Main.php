@@ -14,11 +14,10 @@ class Main extends PluginBase implements Listener {
         if ($event->getEntity() instanceof Player) {
             if ($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
                  $event->setCancelled();
-                 $event->getPlayer()->sendMessage("You fell very high, but the damage was cured from your feet.");
                  $event->setDamage(0);
+                 $event->getPlayer()->sendMessage("You fell very high, but the damage was cured from your feet.");
             }
         }
-    }
+     }
 }
-
 
