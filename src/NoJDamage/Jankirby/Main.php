@@ -9,12 +9,14 @@ use pocketmine\event\entity\EntityDamageEvent;
 class ExamplePlugin extends PluginBase implements Listener {
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
- public function onDamage(EntityDamageEvent $event)
-    {
+  }
+     public function onDamage(EntityDamageEvent $event){  
         if ($event->getEntity() instanceof Player) {
             if ($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
                  $event->setCancelled();
+                 $event->getPlayer()->sendMessage("You fell very high, but the damage was cured from your feet.");
             }
         }
-    } 
+    }
+
 
