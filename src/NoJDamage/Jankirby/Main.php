@@ -6,7 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 
-class ExamplePlugin extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener {
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
