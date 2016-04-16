@@ -2,7 +2,7 @@
 
 namespace NoJDamage\Jankirby;
 
-use pocketmine\PluginBase
+use pocketmine\PluginBase;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase{
