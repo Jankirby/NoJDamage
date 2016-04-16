@@ -3,10 +3,12 @@
 namespace NoJDamage\Jankirby;
 
 use pocketmine\PluginBase;
+use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 
-class Main extends PluginBase{
-
+class ExamplePlugin extends PluginBase implements Listener {
+  public function onEnable(){
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
  public function onDamage(EntityDamageEvent $event)
     {
         if ($event->getEntity() instanceof Player) {
