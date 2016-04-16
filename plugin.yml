@@ -3,3 +3,5 @@ author: Jankirby
 api: [1.0.0,2.0.0]
 main: NoJDamage\Jankirby\Main
 version: 1.0.0
+load: POSWORLD
+description: Disables Fall-Damage
