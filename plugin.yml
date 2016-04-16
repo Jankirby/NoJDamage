@@ -1,0 +1,4 @@
+name: NoJDamage
+author: Jankirby
+api: [1.0.0,2.0.0]
+main: NoJDamage\Jankirby\Main
