@@ -11,15 +11,17 @@ class Main extends PluginBase implements Listener {
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
      public function onDamage(EntityDamageEvent $event){  
+         $p = $event->getEntity();
+         $x = false;
         if ($event->getEntity() instanceof Player) {
             if ($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
-      $p = $event->getEntity();
-      $x = false;
+                $event->setCancelled();
       if(!$this->canGetHurt($p)) {
         $event->setCancelled();
                  $event->getPlayer()->sendMessage("You fell very high, but the damage was cured from your feet.");
             }
         }
      }
+}
 }
 
