@@ -20,10 +20,13 @@ class Main extends PluginBase implements Listener {
         /* @var $cause type */
          $cause = $event->getCause();
         if ($event->getEntity() instanceof Player) {
+            if($this->hasFall($entity)){
+                $this->disableFall();
             if ($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
-                $sendMessage = $event->getPlayer()->sendMessage(TextFormat::RED ."You fell very high, but the damage was cured from your feet.");
-                $setCancelled = $event->setCancelled();
-                return $this->cause; 
+                $sendMessage = $event->getPlayer()->getServer->sendMessage(TextFormat::RED ."You fell very high, but the damage was cured from your feet.");
+                $setCancelled = $event->setCancelled(true);
+                return $this->cause;
+            }
             }
         }
      }
